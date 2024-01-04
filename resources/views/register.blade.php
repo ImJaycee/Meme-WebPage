@@ -14,9 +14,9 @@
                     <input type="text" name="password" id="password" placeholder="Password" class="bg-gray-100 border-2 border-gray-400 w-full p-4 rounded-lg" value="">
                 </div>
                 <div class="mb-4">
-                    <button type="submit" class="bg-blue-900 text-white px-4 py-3 rounded font-medium w-full">Login</button>
+                    <button type="submit" class="bg-blue-900 text-white px-4 py-3 rounded font-medium w-full">Register</button>
                 </div>
-                <p class="text-center text-gray-700">Don't have an account? <a class="text-blue-900" href="/register">Register</a></p>
+                <p class="text-center text-gray-700">Already have an account? <a class="text-blue-900" href="/">login</a></p>
             </form>
         </div>
         <div class="w-3/4 md:w-1/2 mt-5 md:mt-0 p-5 mx-auto rounded-lg">
