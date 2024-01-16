@@ -40,6 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'session', // You can use 'session' or 'token' based on your preference
+            'provider' => 'admin', // This should correspond to the provider defined in the 'providers' array
+        ],
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
     ],
 
     /*
@@ -64,6 +72,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+        
 
         // 'users' => [
         //     'driver' => 'database',

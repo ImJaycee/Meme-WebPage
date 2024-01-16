@@ -4,14 +4,15 @@
         <div class="w-3/4 md:w-1/3 bg-gray-300 p-5 mx-auto rounded-lg md:min-h-2/4 shadow-xl">
             <img class="mx-auto mb-2 rounded-lg" src="{{ asset('images/meme1.gif') }}" alt="meme" width="100px">
 
-            <form action="" class=" p-3 rounded-lg">
+            <form action="" class=" p-3 rounded-lg" method="POST">
+                @csrf
                 <div class="mb-4">
                     <label for="email" class="sr-only">Email</label>
                     <input type="text" name="email" id="email" placeholder="Email" class="bg-gray-100 border-2 border-gray-400 w-full p-4 rounded-lg" value="">
                 </div>
                 <div class="mb-4">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="text" name="password" id="password" placeholder="Password" class="bg-gray-100 border-2 border-gray-400 w-full p-4 rounded-lg" value="">
+                    <input type="password" name="password" id="password" placeholder="Password" class="bg-gray-100 border-2 border-gray-400 w-full p-4 rounded-lg" value="">
                 </div>
                 <div class="mb-4">
                     <button type="submit" class="bg-blue-900 text-white px-4 py-3 rounded font-medium w-full">Register</button>
