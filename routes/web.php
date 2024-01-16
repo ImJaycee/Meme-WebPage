@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name("view.index");
+
 Route::get('/register', function () {
     return view('register');
+});
+
+Route::controller(Controller::class)->group(function(){ 
+
+    Route::post('/login-process', 'loginprocess'); //login process
+    Route::get('/login', 'dashboard')->name('dashboard');
+    Route::get('/logout', 'logout')->name('logout');
+
+    Route::group(['middleware' => 'auth'], function () { //System Admin authentication required
+        // Route::get('/login', 'dashboard')->name('dashboard');
+    });   
 });
