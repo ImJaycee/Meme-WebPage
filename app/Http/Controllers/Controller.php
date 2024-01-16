@@ -20,6 +20,7 @@ class Controller extends BaseController
             // $request->session()->invalidate();
             // $request->session()->regenerateToken();
             session()->flush();
+            
             return redirect('/');
     }
 
